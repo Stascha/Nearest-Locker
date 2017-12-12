@@ -18,12 +18,9 @@ public class NearestLocker
 
             }
 
-
         }
         return Dist;
     }
-
-
 
     public static void main(String[] args)
     {
