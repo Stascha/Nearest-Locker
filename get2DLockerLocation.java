@@ -1,5 +1,4 @@
-/**  Created by stasa on 29.7.16..   **/
-
+/**  Created by stasa on 29.7.16.. **/
 public class NearestLocker
 {
     private static int[][] get2DLockerLocation(int xLength, int yWidth, int[] xCordinates, int[] yCordinates)
@@ -56,13 +55,9 @@ public class NearestLocker
         // Test Case
         int xLength2 = 5;
         int yWidth2 = 7;
-        int[] xCordinates2 = new int[2];
-        int[] yCordinates2 = new int[2];
 
-        xCordinates2[0] = 2;
-        yCordinates2[0] = 3;
-        xCordinates2[1] = 4;
-        yCordinates2[1] = 7;
+        int[] xCordinates2 = {2, 4};
+        int[] yCordinates2 = {3, 7};
 
         int[][] m2 = new int[yWidth2][xLength2];
 
