@@ -9,15 +9,11 @@ public class NearestLocker
         int distance;
         int[][] Dist = new int[xLength][yWidth];
 
-
-        for (int x = 0; x < xLength; x++)
-        {
-            for (int y = 0; y < yWidth; y++)
-            {
+        for (int x = 0; x < xLength; x++){
+            for (int y = 0; y < yWidth; y++){
                 Dist[x][y] = xLength + yWidth;
 
-                for (int i = 0; i < xCordinates.length; i++)
-                {
+                for (int i = 0; i < xCordinates.length; i++){
                     distance = ( Math.abs( xCordinates[i] - (x + 1) ) ) + ( Math.abs(yCordinates[i] - (y + 1) ) );
                     Dist[x][y] = Dist[x][y] > distance ? distance :  Dist[x][y];
                 }
