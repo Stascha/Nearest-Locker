@@ -1,4 +1,4 @@
-/** Created by stasa on 29.7.16.. **/
+/** Created by Stasa on 29.7.16.. **/
 
 import java.util.Random;
 
@@ -14,13 +14,14 @@ public class NearestLocker
                 Dist[x][y] = xLength + yWidth;
 
                 for (int i = 0; i < xCordinates.length; i++){
-                    distance = Math.abs( xCordinates[i] - (x + 1) ) + Math.abs( yCordinates[i] - (y + 1) );
+                    distance = Math.abs( xCordinates[i] - x ) + Math.abs( yCordinates[i] - y );
                     Dist[x][y] = Dist[x][y] > distance ? distance :  Dist[x][y];
                 }
 
             }
 
         }
+        
         return Dist;
     }
 
@@ -28,15 +29,19 @@ public class NearestLocker
     {
         Random r = new Random();
       
-        int xLength2 = 5;
-        int yWidth2 = 5;
-        int[] xCordinates2 = new int[2];
-        int[] yCordinates2 = new int[2];
+        int xLength2 = 10;
+        int yWidth2 = 10;
+        int[] xCordinates2 = new int[4];
+        int[] yCordinates2 = new int[4];
 
-        xCordinates2[0] = r.nextInt(5) + 1;
-        yCordinates2[0] = r.nextInt(5) + 1;
-        xCordinates2[1] = r.nextInt(5) + 1;
-        yCordinates2[1] = r.nextInt(5) + 1;
+        xCordinates2[0] = r.nextInt(10);
+        yCordinates2[0] = r.nextInt(10);
+        xCordinates2[1] = r.nextInt(10);
+        yCordinates2[1] = r.nextInt(10);
+        xCordinates2[2] = r.nextInt(10);
+        yCordinates2[2] = r.nextInt(10);
+        xCordinates2[3] = r.nextInt(10);
+        yCordinates2[3] = r.nextInt(10);
 
         int[][] m2 = new int[yWidth2][xLength2];
 
@@ -44,7 +49,7 @@ public class NearestLocker
 
         for (int i = 0; i < xLength2; i++) {
             for (int j = 0; j < yWidth2; j++) {
-                System.out.print(m2[i][j]);
+                System.out.print(m2[i][j] + " ");
             }
 
             System.out.println();
